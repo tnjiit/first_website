@@ -7,7 +7,11 @@ console.log("Hello World!");
 
 app.get('/', (req, res) => {
     console.log('Saw a request');
-    res.sendFile(__dirname + '../views/index.html');
+    res.json({
+        status: 200,
+        message: "Hello World!"
+    })
+    // res.sendFile(__dirname + '../views/index.html');
 });
 
 app.listen(port, () => {
