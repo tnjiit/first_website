@@ -24,7 +24,7 @@ app.get('/json', (req, res) => {
     });
 });
 
-app.post('/', (req, res) => {
+app.post('/name', (req, res) => {
     res.json({
         name: `${req.body.first} ${req.body.last}`
     });
