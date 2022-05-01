@@ -5,6 +5,8 @@ const port = process.env.PORT || 8080;
 
 console.log("Hello World!");
 
+app.use('/public', express.static(__dirname + '/public'));
+
 app.get('/', (req, res) => {
     console.log('Saw a request');
     res.sendFile(__dirname + '/views/index.html');
